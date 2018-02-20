@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ccd3631c-6ccc-44d1-8864-8bc973fed31a" activeEnvironment="Default" name="REST Project 1" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="true"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="e048683a-02a2-4201-9f67-43ad485913bf" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://bank.gov.ua" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://bank.gov.ua</con:endpoint></con:endpoints><con:resource name="Exchange" path="/NBUStatService/v1/statdirectory/exchange" id="a5ca35c6-2922-4b91-9fb6-e8cad4dcf5ab"><con:settings/><con:parameters/><con:method name="Exchange" id="2778389d-6f98-4827-bff7-4ea31461bba9" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/xml;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>exchange</con:element></con:representation><con:request name="Request 1" id="e9a24a3e-b8bb-474d-81e0-a84d0b3c0c69" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://bank.gov.ua</con:endpoint><con:request/><con:originalUri>http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="d53b07bb-afaa-4306-981e-7a9c89f01550" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.privatbank.ua" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://api.privatbank.ua</con:endpoint></con:endpoints><con:resource name="Pubinfo" path="/p24api/pubinfo?json&amp;exchange&amp;coursid=3" id="ca1d6eab-a1e2-402e-a7b2-6cf3574c621b"><con:settings/><con:parameters/><con:method name="Pubinfo" id="32f51cf3-e2bd-471f-af42-25f76e61cf95" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>error</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="ce26a237-d5e7-41f5-b77e-39afdfe8cec9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.privatbank.ua</con:endpoint><con:request/><con:originalUri>https://api.privatbank.ua/p24api/pubinfo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:testSuite id="e032924d-d2a1-4d91-bf4f-5c7cda0b490e" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b75957ad-56ae-47a0-9ce7-ddf27fdf3a93" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:description>Test case 1 description</con:description><con:settings/><con:testStep type="restrequest" name="Exchange - Request 1" id="f0cd5850-33ef-4889-90d5-8a15ee54a57a"><con:settings/><con:config service="http://bank.gov.ua" resourcePath="/NBUStatService/v1/statdirectory/exchange" methodName="Exchange" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Exchange - Request 1" id="e9a24a3e-b8bb-474d-81e0-a84d0b3c0c69" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://bank.gov.ua</con:endpoint><con:request/><con:originalUri>http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9be3309b-481f-433b-98f8-19f7e951b72e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="38876724-fc04-4b62-959d-741b95cfb404" name="Contains"><con:configuration><token>Канадський долар</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="be746dcf-9346-49fb-af8a-2e03fa92ed73" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+assert messageExchange.timeTaken &lt; 400
+
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+
+assert holder["//cc"].contains('CAD')
+
+ holder["//cc"].each{assert it.toString()!=null}
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="df5ab43b-4aab-42b4-8c9b-cea524cfd599" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true"><con:description>TestCase 2 description</con:description><con:settings/><con:testStep type="restrequest" name="Pubinfo - Request 1" id="7fb5a099-7ef3-4fa6-ae62-b1609c3ddb64"><con:settings/><con:config service="https://api.privatbank.ua" resourcePath="/p24api/pubinfo?json&amp;exchange&amp;coursid=3" methodName="Pubinfo" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Pubinfo - Request 1" id="ce26a237-d5e7-41f5-b77e-39afdfe8cec9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://api.privatbank.ua</con:endpoint><con:request/><con:originalUri>https://api.privatbank.ua/p24api/pubinfo</con:originalUri><con:assertion type="JsonPath Count" id="4103f752-6550-4842-9523-1f0044931fa0" name="JsonPath Count"><con:configuration><path>$..ccy</path><content>4</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="39f5517c-a952-4a88-b66d-49ab70143253" name="JsonPath Match"><con:configuration><path>$..[?(@.ccy!='USD')].ccy</path><content>[EUR, RUR, BTC]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="852a7577-09ed-4cb4-ac3a-ed9d62e0761e" name="JsonPath RegEx Match"><con:configuration><path>$.[*].ccy[0]</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>(EUR)</regEx></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="10fa20ca-e8bd-4b0e-bad3-933527368de4" name="JsonPath Existence Match"><con:configuration><path>$.[*].[*]..ccxyz</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="4c148add-8293-4a20-a402-0a779bcb1fe5"><con:settings/><con:config><script>def response = context.expand('${#Response}')
+log.info(response);</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/><con:tearDownScript>def failedTestCases = 0
+def successTestCases = 0
+def failedTestSteps = 0
+def successTestSteps = 0
+def failedAssertions = 0
+def successAssertions = 0
+
+for( testCaseResult in runner.results)
+{
+	def caseStatus = testCaseResult.status.toString()
+     if(caseStatus == 'FAILED'){failedTestCases ++}
+     else {successTestCases ++}
+	testCaseName = testCaseResult.getTestCase().name
+	testCaseDescription = testCaseResult.getTestCase().description
+     log.info "Test Case: $testCaseName $caseStatus"
+     log.info "Description: $testCaseDescription"
+	for ( testStepResult in testCaseResult.getResults()  )
+	{
+		testStepResult.messages.each() { msg -> log.info "Test message: \"$msg\""}
+		def stepName = testStepResult.testStep.name
+          def stepStatus =  testStepResult.getStatus()
+          if(stepStatus == 'FAILED'){failedTestSteps ++}
+          else{successTestSteps ++}
+          log.info "Test Step: $stepName $stepStatus"
+          
+          if (testStepResult.testStep.config.type.contains('request'))
+          {
+            testStepResult.testStep.getAssertionList().each{
+                def assertLabel = it.label
+                def assertStatus = it.status.toString()
+                if (assertStatus == 'VALID') { successAssertions ++ }
+                else {failedAssertions ++ }
+                    log.info "$it.label - $it.status"   
+            }
+          }
+	}
+}
+
+log.info "Total test case count:" + (successTestCases + failedTestCases).toString()
+log.info "Total test cases succeeded: $successTestCases"
+log.info "Total test cases failed: $failedTestCases"
+
+log.info "Total test step count:" + (successTestSteps + failedTestSteps).toString()
+log.info "Total test steps succeeded: $successTestSteps"
+log.info "Total test steps failed: $failedTestSteps"
+
+log.info "Total test assertion count:" + (successAssertions + failedAssertions).toString()
+log.info "Total test assertions succeeded: $successAssertions"
+log.info "Total test assertions failed: $failedAssertions"
+</con:tearDownScript></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
